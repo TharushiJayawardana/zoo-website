@@ -1,0 +1,122 @@
+/*Valid for the Plant page*/
+
+/*Main Image*/
+.main_slider{
+    width: auto;
+    height: 670px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../image/plant/main_img.jpg");
+}
+
+.main-title{
+    position: absolute;
+    bottom: 20px;
+    left: auto;
+    margin-left: 25px;
+    background-color: white;
+    opacity: 70%;
+}
+
+.title_1
+{
+    font-family: 'Yeseva One';
+    color: rgb(21, 51, 3);
+    font-size: 60px;
+    text-align: center;
+    margin: 20px;
+    letter-spacing: 15px;
+}
+
+/*Table*/
+section{
+    padding: 10px 10px;
+    background: ghostwhite;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px; 
+    background-color: rgb(1, 0, 41);
+    color: aliceblue;
+    padding: 15px;
+}
+
+tfoot td{
+    background-color: white;
+}
+
+td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    background-color: rgb(205, 247, 186);
+    font-size: 16px;
+}
+
+td li{
+    margin: 20px;
+    text-align: justify;
+
+}
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    padding-bottom: 5px;
+}
+
+.column-2 {
+    flex: 10%;
+    padding: 0 4px;
+}
+
+.column-2 img {
+    margin-top: 5px;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .main_slider{
+        width: auto;
+        height: 670px;
+    }
+
+    .main-title{
+        right: auto;
+        bottom: 50px;
+    }
+
+    .title_1{
+        font-size: 45px;
+        margin: 10px;
+    }
+
+    th{
+        font-size: 14px;
+    }
+
+    td{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    td li{
+        margin: 15px;
+    }
+
+    .row-2{
+        display: block; 
+    }
+
+}

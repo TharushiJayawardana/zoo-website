@@ -1,0 +1,360 @@
+/* Common */
+#frmpurchase{
+    padding: 20px
+}
+
+section{
+    padding: 20px 10px;
+    background: rgb(248, 255, 255);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+h1{
+    font-family: 'Rozha One', serif;
+    color: #000e0d;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#hr_2
+{
+    background: #01002e;
+    height: 2px;
+    margin-top: 10px; 
+    width: 100%;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f4fdff;
+}
+
+#expyear{
+    padding-right: 16px;
+}
+  
+.col-50 {
+    flex: 50%;
+    padding-left: 20px;
+}
+
+#donation_col-50{
+    padding-left: 0px;
+}
+  
+#btn_add{
+    padding-left: 0px;
+
+}
+.col-75 {
+    flex: 75%;
+}
+  
+.container {
+    background-color: #f4fdff;
+    padding-right: 15px;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #01380f;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.icon-container {
+    margin-top: 7px;
+    padding: 12px 0;
+    font-size: 24px;
+}
+
+.icon-container img{
+    height: "40";
+}
+
+.btn {
+    background-color: #013925;
+    color: white;
+    font-family: 'Alegreya', serif;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.5s;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background-color: #16153e;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select{
+    padding: 8px;
+    margin: 5px 0;
+    display: inline;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+}
+
+label{
+    font-family: 'Trebuchet MS';
+    text-align: justify;
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    line-height: 2;
+    display: inline;
+}
+
+
+
+
+/*Valid for the Ticket Purchase*/
+
+.co1umn-1
+{
+    flex-basis: 45%;
+}
+
+.row-1
+{
+    display: flex;
+    padding-left: 35px;
+}
+
+.image img
+{
+    width: 90%;
+}
+
+#order_sum{
+    display: block;
+}
+
+#details{
+    font-family: 'Alegreya', serif;
+    text-align: justify;
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+
+#txtadult, #txtchild, #txtnooffoodToken, #txtnoofannualpass{
+    width: 10%;
+    padding: 3px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+input[type=checkbox]{
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+#nofoodToken, #noannualpass{
+    display: none;
+}
+
+#noannualpass{
+    margin-right: 15px;
+}
+
+#chkannualPass, #chkfoodToken {
+    display: inline;
+}
+
+.favbtn{
+    background-color: #230d00;
+    color: white;
+    font-family: 'Alegreya', serif;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.5s;
+    letter-spacing: 2px;
+
+
+}
+
+#btn_add{
+    margin-right: 0px;
+}
+  
+
+
+#order_sum
+{
+    display: none;
+}
+
+table, th, tr, td{
+    border: 1px solid black;
+    
+}
+
+table{
+    width: 100%;
+}
+
+th, tr, td{
+    padding: 5px;
+    
+}
+
+#thead_order{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;     
+    color: hsl(0, 0%, 0%);
+    background-color: rgb(44, 2, 46);
+    color: white;
+}
+
+#tbody_order{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;     
+    color: hsl(0, 0%, 0%);
+    background-color: rgb(246, 203, 249);
+    text-align: center;
+}
+
+#tfoot_order{
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;     
+    color: hsl(0, 0%, 0%);
+    background-color: rgb(247, 245, 199);
+    text-align: center;
+}
+
+#grandTotal{
+    text-align: right;
+}
+
+
+/*Valid for the Donation*/
+
+/*Main Image*/
+.main_slider img{
+    width: auto;
+    height: 670px;
+    background-size: cover;
+
+}
+
+.slide{
+    display: flex;
+    gap: 20px;
+}
+
+.slide .image img{
+    display: block;
+    width: auto;
+    height: 300px;
+    padding-top: 10px;
+}
+
+.content{
+    width: 100%;
+    padding: 10px;
+}
+
+h5{
+    font-family: 'Rozha One', serif;
+    color: #01380f;
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Alegreya', serif;
+    text-align: justify;
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #01380f;
+    font-size: 25px;
+}
+
+#check1 {
+    display: inline-block;
+    margin-left: 0px;
+}
+
+@media (max-width: 700px) {
+    .slide .image img{
+        height: 100px;
+    }
+
+    .content{
+        width: auto;
+    }
+
+    h1{
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+
+    h5{
+        font-size: 20px;
+    }
+
+    textarea{
+        width: 100%;
+    }
+
+    form{
+        padding: 10px;
+    }
+
+    #input{
+        width: 100%;
+        padding: 8px;
+    }
+
+    label{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+}

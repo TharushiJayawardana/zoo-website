@@ -1,0 +1,265 @@
+
+/*Valid for all the pages*/
+/* (1) Genaral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body{ 
+    margin: 0px; 
+    padding: 0px;
+    background: #ffff;
+    color: #1e1e27;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* (3) Home */
+header{
+    position: relative;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    justify-content: space-between;
+
+}
+
+/* (3.1) Logo */
+.logo_container
+{
+    padding: 0px 30px 0px 20px;
+}
+
+header .logo img{
+    width: 200px;
+    height: 100px;
+}
+
+/* (3.2) Main Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-links a {
+    font-family: Verdana;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: #1e1e27;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+/* NAVBAR MENU */
+.search{
+    display:flex;
+    align-items: center;
+    padding-right: 30px;
+    list-style: none;
+}
+
+#search{
+    margin: 8px 0;
+    display: inline;
+    border: 0;
+    font-size: 15px;
+}
+
+#search_icon{
+    color: black;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu a.active,
+.menu a:hover {
+    background-color: #0a183d;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    color: whitesmoke;
+}
+
+.menu li {
+    padding-left: 15px;
+    list-style: none;
+}
+
+/* DROPDOWN MENU */
+.species{
+    position: relative; 
+}
+
+.dropdown {
+    background-color: #fff;
+    padding: 10px 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+    border: 5px;
+    border: 2px solid #0a183d;
+    
+}
+
+.dropdown:hover {
+    transition: 0.5s ease;
+    color: whitesmoke;
+}
+
+.dropdown li {
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.species:hover .dropdown {
+    display: block;
+}
+
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+} 
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+
+
+/* Footer links */
+.footer-distributed{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+}
+  
+.footer-social {
+    cursor: pointer;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+  
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 5px;
+    font-size: 30px;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    transition: all .25s;
+  
+  }
+  
+.footer-social a:hover {
+    transform: scale(1.1);
+  }
+
+hr
+{
+    background: #b5b5b5;
+    height: 2px;
+    margin-bottom: 10px;
+
+}
+
+h6{
+    color: whitesmoke;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* APPLYING MEDIA QUERIES */
+@media screen and (max-width: 700px) {
+    header .logo img{
+        width: auto;
+        height: 90px;
+    }
+
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin-top: 10px;
+        padding: 30px 0;
+        z-index: 2;
+    }
+    
+    .menu li + li {
+        margin-top: 25px;
+    }
+
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+        
+    .hamburger {
+        display: block;
+        padding-right: 0px;
+    }
+        
+    .dropdown {
+        left: 57%;
+        transform: translateX(30%);
+        top: 0px;    
+    }
+
+
+    .dropdown:hover {
+        transition: 5s ease;
+        color: whitesmoke;
+    }
+
+    .dropdown li {
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .dropdown li a{
+        font-size: 12px;
+    }
+
+    .search{
+        padding-right: auto;
+        padding-left: 20px;
+        resize: both;
+    }
+
+    input[type=text]{
+        width: 100%;
+    }
+    
+    /*Footer*/
+    h6{
+        font-size: 08px;
+        padding-left: 15px;
+    }
+}
+

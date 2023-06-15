@@ -1,0 +1,84 @@
+/*Valid for the Contact page*/
+
+section{
+    padding: 20px 10px;
+    background: ghostwhite;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.slide .image img{
+    width: 100%;
+    height: 400px;
+    
+}
+
+
+.content{
+    width: 100%;
+    padding-left: 20px;
+   
+}
+
+h3{
+    font-family: 'Rozha One', serif;
+    color: #000e0d;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-family: 'Alegreya', serif;
+    text-align: justify;
+    color: black;
+    font-size: 25px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+span{
+    font-family: 'Rozha One', serif;
+    color: #ad0909;
+    font-size: 70px;
+    line-height: 1;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.content p span{
+    font-family: 'Alegreya', serif;
+    font-size: 25px;
+    margin-top: 10px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: #056e1b;
+}
+
+
+@media (max-width: 700px) {
+    h3{
+        font-size: 30px;
+    } 
+
+    span{
+        font-size: 30px;
+    }
+    
+    p{
+        font-size: 20px;
+    }
+
+    .content p span{
+        font-size: 20px;
+    }
+}

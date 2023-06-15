@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome To Dehiwala Zoo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="assets/image/index/logo2.ico">
+
+        <!-- CSS Files -->
+	    <link rel="stylesheet" type="text/css" href="assets/css/general.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/buy_now.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+
+        <!-- JavaScript Files -->
+        <script src="assets/js/order_process.js"></script>
+
+        <!-- font Awesome Cdn -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo_container">
+             <a href="index.html" class="logo">
+                 <img src="assets/image/index/logo1.png">
+             </a>
+             </div>
+ 
+             <nav class="navbar">
+             <!-- NAVIGATION MENU -->
+                 <ul class="nav-links">
+                 <!-- USING CHECKBOX HACK -->
+                     <input type="checkbox" id="checkbox_toggle" />
+                     <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                     <!-- NAVIGATION MENUS -->
+                     <div class="menu">
+                         <li><a href="index.html">HOME</a></li>
+                         <li class="species">
+                             <a href="species.html">SPECIES</a>
+                             <!-- DROPDOWN MENU -->
+                             <ul class="dropdown">
+                                 <li><a href="mammal.html"> MAMMAL </a></li>
+                                 <li><a  href="bird.html"> BIRD </a></li>
+                                 <li><a  href="aquarium.html"> AQUARIUM </a></li>
+                                 <li><a href="reptile.html"> REPTILE </a></li>
+                                 <li><a href="butterfly.html"> BUTTERFLY </a></li>
+                                 <li><a href="plant.html"> PLANT </a></li>
+                             </ul>
+                         </li>
+                         <li><a href="museum.html">MUSEUM</a></li>
+                         <li><a href="events.html">EVENTS</a></li>
+                         <li><a class="active" href="buy_now.html">BUY NOW</a></li>
+                         <li><a href="about.html">ABOUT</a></li>
+                         <li><a href="contact.html">CONTACT</a></li>
+                     </div>
+                 </ul>
+             </nav>
+ 
+             <div class="search">
+                 <li><input type="text" id="search" placeholder="Search"></li>
+                 <li><a href="#"><i class="fas fa-search" id="search_icon"></i></a></li>
+             </div>
+             
+         </header>
+
+         <div class="row-1">
+             <div class="column-1">
+                 <div class="image">
+                     <img src="assets/image/tickets/1.jpg">
+                 </div>
+             </div>
+
+             <div class="column-1">
+                <div class="image">
+                    <img src="assets/image/tickets/2.jpg">
+                </div>
+            </div>
+
+            <div class="column-1">
+                <div class="image">
+                    <img src="assets/image/tickets/3.jpg">
+                </div>
+            </div>
+
+            <div class="column-1">
+                <div class="image">
+                    <img src="assets/image/tickets/4.jpg">
+                </div>
+            </div>
+         </div>
+
+         <div class="row">
+             <div class="col-75">
+                <div class="container">
+                    
+                    <form id="frmpurchase">
+
+                        <h1> TICKET TO DEHIWALA ZOO </h1>
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Ticket Information</h3>
+                                <hr id="hr_2">
+                                <label for="type">Ticket type :</label>
+                                    <select name="type" id="cmbticketType"  onchange="calculateCost();">
+                                        <option value=" ">-- Select Here --</option>
+                                        <option value="0">Day Pass</option>
+                                        <option value="1">Student Pass</option>
+                                        <option value="2">Foreigner  Pass</option>
+                                    </select><br>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="adult">Number Of Adult :</label>
+                                        <input type="text" size = "5" value="1" id= "txtadult" onblur="calculateCost();">
+                                    </div>
+                                    <div class="col-25">
+                                        <label for="child">Number Of Child :</label>
+                                        <input type="text" size = "5" value="0" id= "txtchild" onblur="calculateCost();">
+                                    </div>
+                                </div>
+
+                                <label for="duration">Time duration :</label>
+                                    <select name="duration" id="cmbtimeDuration" onchange="calculateCost();">
+                                        <option value=" ">3 hours</option>
+                                        <option value="0">Half Day</option>
+                                        <option value="1">Full Day</option>
+                                        <option value="2">2 Days</option>
+                                    </select><br>
+
+                                <label>Other extra passes :</label>
+                                <label for = "chkannualPass">
+                                <input type="checkbox" id="chkannualPass" onchange="calculateCost();" value="yes" /> Annual Pass </label>
+                                <label for = "chkfoodToken">
+                                <input type="checkbox" id="chkfoodToken" onchange="calculateCost();" value="yes"/> Food Token </label><br>
+                            
+                                <div id="noannualpass">
+                                    <label>Number of Annual Passes :</label>
+                                    <input type="text" size = "5" value = "1" id= "txtnoofannualpass" onblur="calculateCost();" />
+                                </div>
+
+                                <div id="nofoodToken">
+                                    <label>Number of Food Tokens :</label>
+                                    <input type="text" size = "5" value = "1" id= "txtnooffoodToken" onblur="calculateCost();" />
+                                </div><br>
+
+                                <label>Total Amount: LKR <span id = "spamount">0.00</span></label><br>
+
+                                <input type="button" value="ADD TO ORDER" id="addbtn" class="btn" onclick="addToOrder();">
+                                <div class="row" >
+                                    <div class="col-50" id="btn_add">
+                                        <input type="button" value="ADD TO FAVOURITES" id="addFav" class="favbtn" onclick="addToFavourites();">
+                                    </div>
+                                    <div class="col-50">
+                                        <input type="button" value="ORDER FAVOURITES" id="orderFav" class="favbtn" onclick="orderFavourites();">
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="col-50">
+                                <div class="container" id="order_sum">
+                                  <h3>Order Summary</h3>
+                                  <hr id="hr_2">
+                                  <table id="tbl_order">
+                                      <thead>
+                                          <tr id="thead_order">
+                                          <th id="ticket_type">Ticket Type</th>
+                                          <th id="no_of_adults">Adult</th>
+                                          <th id="no_of_children">Child</th>
+                                          <th>Duration</th>
+                                          <th>Annual Pass</th>
+                                          <th>Food Token</th>
+                                          <th>Total</th>
+                                        </tr>
+                            
+                                      </thead>
+                                      <tbody id="tbody_order">
+
+                                      </tbody>
+                                      <tfoot id="tfoot_order">
+                                          <tr>
+                                              <th colspan="6">Grand Total</th>
+                                              <th >LKR <span id = "spgrandtotal">0.00</span></th>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                                  
+                                </div>
+                            </div>
+
+                                <div class="col-50">
+                                    <h3>Billing Information</h3>
+                                    <hr id="hr_2">
+
+                                    <label for="fname"> Full Name</label>
+                                    <input type="text" id="txtfname" name="firstname" minlength="10" placeholder="Kamala Perera">
+                                    <label for="email"> Email Address </label>
+                                    <input type="text" id="txtemail" name="email" placeholder="kamalaperera@email.com">
+                                    <label for="adr">Home Address</label>
+                                    <input type="text" id="adr" name="address" placeholder="No. 43, Rose Road">
+                                    <label for="contact"> Contact Number</label>
+                                    <input type="text" size="10" id="contact" name="contact" placeholder="+94700000000">
+                                </div>
+
+                                <div class="col-50">
+                                    <h3>Payment Information</h3>
+                                    <hr id="hr_2">
+
+                                    <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_visa.png"/>
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_master.png"/>
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_unionpay.png"/>                                             
+                                        </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Kamala Perera">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" size="15" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="04">
+                                    <div class="row">
+                                        <div class="col-25" id="expyear">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="18">
+                                        </div>
+                                        <div class="col-25">
+                                            <label for="cvv">CVV**</label>
+                                            <input type="text" size = "3" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <label> Read our <a href="#">Privacy & Policy</a></label>
+                            <input type="button" value="PLACE YOUR ORDER" class="btn" onclick="placeOrder();">
+                            
+                                
+                            
+                        </div>
+
+                    </form>
+                </div>
+             </div>
+         </div>
+
+         <section class="contact" id="contact">
+            <h1> DONATE TO DEHIWALA ZOO </h1>
+            <div class="slide">
+                <div class="image">
+                   <img src="assets/image/donate/1.jpg" >
+                   <img src="assets/image/donate/2.jpg" >
+                   <img src="assets/image/donate/3.jpg" >
+                </div>
+                <div class="content">
+                    <h5>We're so grateful for your support of our mission</h5>
+                    <p>When you make a Dehiwala Zoo donation, you're doing more than ensuring that we can continue to provide world-class care for the 3,000 wild and wonderful animals under our care and supporting our tireless field conservation efforts on five continents. In addition, your gift is also paving the way for the next generation of wildlife advocates. As a non-profit organization, we rely on your Dehiwala Zoo donation to support the important work we do to educate and inspire animal lovers of all ages.</p>
+                    <p>To donate to Dehiwala Zoo, simply fill the below form</p>
+
+                    <div class="row">
+                        <div class="col-75">
+                            <div class="container">
+                                <form id="frmdonations">
+                                    <div class="col-50" id="donation_col-50">
+                                        <h3>Billing Information</h3>
+                                        <hr id="hr_2">
+    
+                                        <label for="fname"> Full Name</label>
+                                        <input type="text"  id="fname" name="firstname" placeholder="Kamala Perera">
+                                        <label for="email"> Email Address </label>
+                                        <input type="text" id="email" name="email" placeholder="kamalaperera@email.com">
+                                        <label for="adr">Home Address</label>
+                                        <input type="text" id="adr" name="address" placeholder="No. 43, Rose Road">
+                                        <label for="contact"> Contact Number</label>
+                                        <input type="text" size = 10 id="contact" name="contact" placeholder="+94700000000">
+                                        <label for="type">Donation Amount: </label>
+                                            <select name="type" id="cmbdonationamount" required onchange="calculateCost();">
+                                                <option value=" ">-- Select Here --</option>
+                                                <option value="0">LKR 100.00</option>
+                                                <option value="1">LKR 250.00</option>
+                                                <option value="2">LKR 500.00</option>
+                                                <option value="3">LKR 1000.00</option>
+                                                <option value="4">LKR 2500.00</option>
+                                                <option value="5">LKR 5000.00</option>
+                                                <option value="6">LKR 10000.00</option>
+                                            </select><br>
+                                    </div>
+    
+                                    <div class="col-50" id="donation_col-50">
+                                        <h3>Payment Information</h3>
+                                        <hr id="hr_2">
+    
+                                        <label for="fname">Accepted Cards</label>
+                                        <div id="cards" class="icon-container">
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_visa.png"/>
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_master.png"/>
+                                            <input type="radio"> <img src="https://shoplineimg.com/assets/footer/card_unionpay.png"/>                                             
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="Kamala Perera">
+                                        <label for="ccnum">Credit card number</label>
+                                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                        <label for="expmonth">Exp Month</label>
+                                        <input type="text" id="expmonth" name="expmonth"  maxlength="2" placeholder="04" onblur="checkExpireDate();">
+                                        <div class="row">
+                                            <div class="col-25" id="expyear">
+                                                <label for="expyear">Exp Year</label>
+                                                <input type="text" id="expyear"  maxlength="4" name="expyear" placeholder="22" onblur="checkExpireDate();">
+                                            </div>
+                                            <div class="col-25">
+                                                <label for="cvv">CVV**</label>
+                                                <input type="text" size="3" id="cvv" name="cvv" placeholder="352">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p >
+                        <input type="checkbox" id="check1"> I would like this gift to remain anonymous
+                    </p>
+                    <p>We would like to contact you from time to time about different ways to support our mission, future events, as well as updates on our work. Please opt-in to receiving these via the options below. You can unsubscribe at any time.</p>
+                    <p>Read our <a href="#">Privacy & Policy</a></p>
+
+                    <input type="button" value="SUBMIT" class="btn" onclick="donate()">
+                </div>
+            </div>
+        </section>
+
+         <footer class="footer-distributed">
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div>
+                <img src="assets/image/valid_html.png">
+                <img src="assets/image/valid_css.png">
+            </div>
+        
+            <hr>
+            <h6>Copyright © 2021 - DEHIWALA ZOO | All Right Reserved | Designed By M D T D Jayawardana | cb010045@students.apiit.lk</h6>
+        </footer>
+
+
+
+    </body>
+    </html>
