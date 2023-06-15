@@ -1,2 +1,2 @@
 # zoo-website
-Simple website which created for a zoo.
+Simple website that was created for a zoo.
